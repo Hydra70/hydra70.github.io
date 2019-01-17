@@ -48,15 +48,14 @@
         ]
       },
       {
-      "type":"soft shell crab",
-      "price":9.99,
+      "type":"fried rice",
+      "price":2.40,
       "ingredients":[
           "rice",
-          "ume",
-          "crab",
-          "tears",
-          "furikake",
-          "knowledge"
+          "peas",
+          "ham",
+          "egg",
+          "beef"
         ]
       },
       {
