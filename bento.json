@@ -23,6 +23,30 @@
           "furikake",
           "knowledge"
         ]
+      },
+      {
+      "type":"chicken katsu",
+      "price":5.99,
+      "ingredients":[
+          "rice",
+          "chicken",
+          "egg",
+          "tonkatsu sauce",
+          "flour",
+          "panko"
+        ]
+      },
+      {
+      "type":"soft shell crab",
+      "price":9.99,
+      "ingredients":[
+          "rice",
+          "ume",
+          "crab",
+          "tears",
+          "furikake",
+          "knowledge"
+        ]
       }
       
     ]
