@@ -37,6 +37,29 @@
         ]
       },
       {
+      "type":"shrimp",
+      "price":4.59,
+      "ingredients":[
+          "rice",
+          "shrimp",
+          "garlic",
+          "butter",
+          "lemon"
+        ]
+      },
+      {
+      "type":"soft shell crab",
+      "price":9.99,
+      "ingredients":[
+          "rice",
+          "ume",
+          "crab",
+          "tears",
+          "furikake",
+          "knowledge"
+        ]
+      },
+      {
       "type":"soft shell crab",
       "price":9.99,
       "ingredients":[
