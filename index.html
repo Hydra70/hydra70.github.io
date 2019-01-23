@@ -5,19 +5,29 @@
   </head>
   
   <body>
+    <h1>*Insert Original Brand Name Here*</h1>
     <img src="https://thumbs.gfycat.com/ChubbyBackEel-max-1mb.gif">
-    <div id="salmon"></div>
+    <div id="salmon">
+      <p id="fish"></p>
+    </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
-          window.alert(mydata.bento[3].ingredients[3]);
+          document.getElementById('fish').innerHTML = mydata.bento[0].type[0];
+          //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
+      //checkout
+      var x = localStorage.getItem('sub0')[0];
+      
+      var p = $.getElementsByTagName('p')[0];
+      var newText = $.createTextNode(parseFloat(x).toFixed(2));
+      p.appendChild(newText);
     </script>
   </body>
 </html>
