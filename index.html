@@ -16,7 +16,7 @@
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
-          document.getElementById('fish').innerHTML = mydata.bento[0].type[0];
+          document.getElementById('fish').innerHTML = mydata.bento[0].type;
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
