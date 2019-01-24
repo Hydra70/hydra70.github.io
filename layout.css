@@ -1,11 +1,14 @@
 #salmon{
   width: 20vw;
-  height: 50vh;
+  height: 60vh;
   background-color: #e18b6b;
+  left: 0.4vw;
+  top: 10.9vh;
+  position: absolute;
 }
 #crab{
   width: 20vw;
-  height: 50vh;
+  height: 60vh;
   background-color: #659ec7;
   left: 21vw;
   top: 10.9vh;
@@ -13,9 +16,25 @@
 }
 #chicken{
   width: 20vw;
-  height: 50vh;
+  height: 60vh;
   background-color: #fff380;
   left: 41.5vw;
   top: 10.9vh;
+  position: absolute;
+}
+#shrimp{
+  width: 20vw;
+  height: 60vh;
+  background-color: #7f5217;
+  left: .4vw;
+  top: 72vh;
+  position: absolute;
+}
+#rice{
+  width: 20vw;
+  height: 60vh;
+  background-color: #7f5217;
+  left: 21vw;
+  top: 72vh;
   position: absolute;
 }
