@@ -1,5 +1,21 @@
 #salmon{
   width: 20vw;
-  height: 180vh;
+  height: 50vh;
   background-color: #e18b6b;
+}
+#crab{
+  width: 20vw;
+  height: 50vh;
+  background-color: #659ec7;
+  left: 21vw;
+  top: 10.9vh;
+  position: absolute;
+}
+#chicken{
+  width: 20vw;
+  height: 50vh;
+  background-color: #fff380;
+  left: 41.5vw;
+  top: 10.9vh;
+  position: absolute;
 }

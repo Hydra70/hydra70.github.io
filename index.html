@@ -12,6 +12,18 @@
       <p id="ingredients1"></p>
       <img src="https://www.bbcgoodfood.com/sites/default/files/styles/push_item/public/guide/hub-image/2013/06/the-health-benefits-of-salmon-200-200.jpg?itok=0BRjjH8V">
     </div>
+    <div id="crab">
+      <p id="softshell"></p>
+      <p id="price2"></p>
+      <p id="ingredients2"></p>
+      <img src="http://s1.grouprecipes.com/images/recipes/200/485066484.jpg">
+    </div>
+    <div id="chicken">
+      <p id="katsu"></p>
+      <p id="price3"></p>
+      <p id="ingredients3"></p>
+      <img src="https://s3-media4.fl.yelpcdn.com/bphoto/x45GO4k8WM5INsjim_XN8Q/180s.jpg">
+    </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
       var xmlhttp = new XMLHttpRequest();
@@ -21,6 +33,12 @@
           document.getElementById('fish').innerHTML = mydata.bento[0].type;
           document.getElementById('price1').innerHTML = mydata.bento[0].price;
           document.getElementById('ingredients1').innerHTML = mydata.bento[0].ingredients;
+          document.getElementById('softshell').innerHTML = mydata.bento[1].type;
+          document.getElementById('price2').innerHTML = mydata.bento[1].price;
+          document.getElementById('ingredients2').innerHTML = mydata.bento[1].ingredients;
+          document.getElementById('katsu').innerHTML = mydata.bento[2].type;
+          document.getElementById('price3').innerHTML = mydata.bento[2].price;
+          document.getElementById('ingredients3').innerHTML = mydata.bento[2].ingredients;
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
