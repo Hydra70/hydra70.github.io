@@ -45,17 +45,6 @@
     </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
-    var previous = null;
-    var current = null;
-    setInternal(function(){
-      $.getJSON('bento.json',function(json){
-        current= JSON.stringify(json);
-        if (previous && current && previous !== current){
-          location.reload();
-        }
-        previous = current;
-      });
-    },2000);
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
@@ -89,6 +78,17 @@
       var p = $.getElementsByTagName('p')[0];
       var newText = $.createTextNode(parseFloat(x).toFixed(2));
       p.appendChild(newText);
+    var previous = null;
+    var current = null;
+    setInternal(function(){
+      $.getJSON('bento.json',function(json){
+        current= JSON.stringify(json);
+        if (previous && current && previous !== current){
+          location.reload();
+        };
+        previous = current;
+      });
+    },2000);
     </script>
   </body>
 </html>
