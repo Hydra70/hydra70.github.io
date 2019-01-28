@@ -49,3 +49,11 @@ body{
   top: 72vh;
   position: absolute;
 }
+#receipt{
+  width: 20vw;
+  height: 120vh;
+  background-color: #e18b6b;
+  right: 0.4vw;
+  top: 10.9vh;
+  position: absolute;
+}
