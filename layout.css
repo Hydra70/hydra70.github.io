@@ -33,8 +33,16 @@
 #rice{
   width: 20vw;
   height: 60vh;
-  background-color: #7f5217;
+  background-color: #f2bb66;
   left: 21vw;
+  top: 72vh;
+  position: absolute;
+}
+#tempura{
+  width: 20vw;
+  height: 60vh;
+  background-color: #c68e17;
+  left: 41.5vw;
   top: 72vh;
   position: absolute;
 }
