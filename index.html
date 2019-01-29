@@ -50,7 +50,15 @@
       <input type="text" id="quant6">
     </div>
     <div id="receipt">
-      
+      <p id="item1"></p>
+      <p id="item2"></p>
+      <p id="item3"></p>
+      <p id="item4"></p>
+      <p id="item5"></p>
+      <p id="item6"></p>
+      <p id="taxes"></p>
+      <input type="text" id="tip">
+      <h1 id="total"></h1>
     </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
@@ -82,6 +90,14 @@
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
       //checkout
+      var tax = 4.712%;
+      document.getElementById('taxes').innerHTML = tax;
+      function item1(){
+        var sale = document.getElementById('quant1').value;
+        var product = bento[0].price;
+        var regis = ((sale * product) * tax).toFixed(2);
+        document.getElementById('item1').innerHTML = regis;
+      }
       var x = localStorage.getItem('sub0')[0];
       
       var p = $.getElementsByTagName('p')[0];
