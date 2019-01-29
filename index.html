@@ -85,14 +85,13 @@
           document.getElementById('roll').innerHTML = mydata.bento[5].type;
           document.getElementById('price6').innerHTML = mydata.bento[5].price;
           document.getElementById('ingredients6').innerHTML = mydata.bento[5].ingredients;
+          document.getElementById('taxes').innerHTML = mydata.bento[6].tax;
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
       //checkout
-      var tax = 4.712%;
-      //document.getElementById('taxes').innerHTML = tax;
       /*function item1(){
         var sale = document.getElementById('quant1').value;
         var product = bento[0].price;
