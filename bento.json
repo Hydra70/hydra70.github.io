@@ -1,7 +1,7 @@
 {
   "bento" : [
       {
-      "type":"salmon",
+      "type":"Salmon",
       "price":7.79,
       "ingredients":[
           "rice",
@@ -13,7 +13,7 @@
         ]
       },
       {
-      "type":"soft shell crab",
+      "type":"Soft Shell Crab",
       "price":9.99,
       "ingredients":[
           "rice",
@@ -25,7 +25,7 @@
         ]
       },
       {
-      "type":"chicken katsu",
+      "type":"Chicken Katsu",
       "price":5.99,
       "ingredients":[
           "rice",
@@ -37,7 +37,7 @@
         ]
       },
       {
-      "type":"shrimp",
+      "type":"Shrimp",
       "price":4.59,
       "ingredients":[
           "rice",
@@ -48,7 +48,7 @@
         ]
       },
       {
-      "type":"fried rice",
+      "type":"Fried Rice",
       "price":2.40,
       "ingredients":[
           "rice",
@@ -59,7 +59,7 @@
         ]
       },
       {
-      "type":"tempura roll",
+      "type":"Tempura Roll",
       "price":9.99,
       "ingredients":[
           "rice",
