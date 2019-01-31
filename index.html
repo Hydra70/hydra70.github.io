@@ -58,6 +58,7 @@
       <p id="item6"></p>
       <p id="taxes"></p>
       <h1 id="total"></h1>
+      <button onclick="purchase1">Update Receipt</button>
     </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
@@ -91,10 +92,10 @@
       xmlhttp.send();
       //checkout
       function purchase1(){
-        var sale = document.getElementById('quant1').value;
-        var product = bento[0].price;
-        var regis = ((sale * product) * tax).toFixed(2);
-        document.getElementById('item1').innerHTML = regis;
+        var sale1 = document.getElementById('quant1').value;
+        var product1 = bento[0].price;
+        var regis1 = ((sale * product1) * tax).toFixed(2);
+        document.getElementById('item1').innerHTML = regis1;
       }
       var x = localStorage.getItem('sub0')[0];
       
