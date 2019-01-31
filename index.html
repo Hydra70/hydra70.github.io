@@ -68,9 +68,9 @@
     </div>
     <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
+      //var fn = [];
+      //var fp = [];
       var xmlhttp = new XMLHttpRequest();
-      var fn = [];
-      var fp = [];
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
           var mydata = JSON.parse(this.responseText);
@@ -93,10 +93,10 @@
           document.getElementById('price6').innerHTML = mydata.bento[5].price;
           document.getElementById('ingredients6').innerHTML = mydata.bento[5].ingredients;
           document.getElementById('taxes').innerHTML = mydata.bento[6].tax;
-          for(vari = 0; i < mydata.food.length; i++){
+          /*for(vari = 0; i < mydata.food.length; i++){
             fn.push(mydata.food[i].name);
             fp.push(mydata.food[i].price);
-          }
+          }*/
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
