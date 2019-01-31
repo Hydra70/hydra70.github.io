@@ -11,7 +11,7 @@
       <p id="fish"></p>
       <p id="price1"></p>
       <p id="ingredients1"></p>
-      <img src="https://www.bbcgoodfood.com/sites/default/files/styles/push_item/public/guide/hub-image/2013/06/the-health-benefits-of-salmon-200-200.jpg?itok=0BRjjH8V">
+      <img src="https://res.cloudinary.com/grubhub/image/upload/f_auto,fl_lossy,q_80,c_fill,w_200,h_150/ucggevejbgqmdphjjbd0">
       <select id="qty1">
         <option value="1">1</option>
       </select>
@@ -100,8 +100,6 @@
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
-      xmlhttp.open("GET","bento.json",true);
-      xmlhttp.send();
       //checkout
       /*function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
         var sale1 = document.getElementById('quant1').value;
@@ -131,11 +129,14 @@
         document.getElementById('item6').innerHTML = regis6;
         document.getElementById('total').innerHTML = regis7;
       }*/
-      var x = localStorage.getItem('sub0')[0];
+      var x = localStorage.getItem('fn')[0];
       
       var p = $.getElementsByTagName('p')[0];
       var newText = $.createTextNode(parseFloat(x).toFixed(2));
       p.appendChild(newText);
+      
+      xmlhttp.open("GET","bento.json",true);
+      xmlhttp.send();
       
     var previous = null;
     var current = null;
