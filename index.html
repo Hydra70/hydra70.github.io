@@ -91,11 +91,33 @@
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
       //checkout
-      function purchase1(){
+      function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything.
         var sale1 = document.getElementById('quant1').value;
+        var sale2 = document.getElementById('quant2').value;
+        var sale3 = document.getElementById('quant3').value;
+        var sale4 = document.getElementById('quant4').value;
+        var sale5 = document.getElementById('quant5').value;
+        var sale6 = document.getElementById('quant6').value;
         var product1 = bento[0].price;
-        var regis1 = ((sale * product1) * tax).toFixed(2);
+        var product2 = bento[1].price;
+        var product3 = bento[2].price;
+        var product4 = bento[3].price;
+        var product5 = bento[4].price;
+        var product6 = bento[5].price;
+        var regis1 = ((sale1 * product1) * tax).toFixed(2);
+        var regis2 = ((sale2 * product2) * tax).toFixed(2);
+        var regis3 = ((sale3 * product3) * tax).toFixed(2);
+        var regis4 = ((sale4 * product4) * tax).toFixed(2);
+        var regis5 = ((sale5 * product5) * tax).toFixed(2);
+        var regis6 = ((sale6 * product6) * tax).toFixed(2);
+        var regis7 = (regis1 + regis2 + regis3 + regis4 + regis5 + regis6);
         document.getElementById('item1').innerHTML = regis1;
+        document.getElementById('item2').innerHTML = regis2;
+        document.getElementById('item3').innerHTML = regis3;
+        document.getElementById('item4').innerHTML = regis4;
+        document.getElementById('item5').innerHTML = regis5;
+        document.getElementById('item6').innerHTML = regis6;
+        document.getElementById('total').innerHTML = regis7;
       }
       var x = localStorage.getItem('sub0')[0];
       
