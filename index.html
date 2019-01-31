@@ -135,20 +135,26 @@
       var newText = $.createTextNode(parseFloat(x).toFixed(2));
       p.appendChild(newText);
       
+      //var sum = priceArr.reduce(add,0);
+      /*function add(a,b){
+        return a + b;
+      }*/
+      //window.alert(sum);
+        
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
       
-    var previous = null;
-    var current = null;
-    setInternal(function(){
-      $.getJSON('bento.json',function(json){
-        current= JSON.stringify(json);
-        if (previous && current && previous !== current){
-          location.reload();
-        };
-        previous = current;
-      });
-    },2000);
+      var previous = null;
+      var current = null;
+      setInternal(function(){
+        $.getJSON('bento.json',function(json){
+          current= JSON.stringify(json);
+          if (previous && current && previous !== current){
+            location.reload();
+          };
+          previous = current;
+        });
+      },2000);
     </script>
   </body>
 </html>
