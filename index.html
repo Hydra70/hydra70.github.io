@@ -67,8 +67,8 @@
       <h1 id="total"></h1>
     </div>
     <script>
-      //var fn = [];
-      //var fp = [];
+      var fn = [];
+      var fp = [];
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
@@ -92,18 +92,32 @@
           document.getElementById('price6').innerHTML = mydata.bento[5].price;
           document.getElementById('ingredients6').innerHTML = mydata.bento[5].ingredients;
           document.getElementById('taxes').innerHTML = mydata.bento[6].tax;
-          /*for(vari = 0; i < mydata.food.length; i++){
-            fn.push(mydata.food[i].name);
-            fp.push(mydata.food[i].price);
-          }*/
+          for(vari = 0; i < mydata.bento.length; i++){
+            fn.push(mydata.bento[0].name);
+            fn.push(mydata.bento[1].name);
+            fn.push(mydata.bento[2].name);
+            fn.push(mydata.bento[3].name);
+            fn.push(mydata.bento[4].name);
+            fn.push(mydata.bento[5].name);
+            fp.push(mydata.bento[0].price);
+            fp.push(mydata.bento[1].price);
+            fp.push(mydata.bento[2].price);
+            fp.push(mydata.bento[3].price);
+            fp.push(mydata.bento[4].price);
+            fp.push(mydata.bento[5].price);
+          }
           //window.alert(mydata.bento[3].ingredients[3]);
+          window.alert(fn[0]+fp[0]);
         }
       }
       //checkout
       
       
-      /*function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
-        var sale1 = document.getElementById('quant1').value;
+      function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
+        var x = document.getElementById('qty1').value;
+        var y = x * mydata.bento[0].price;
+        window.alert(y);
+        /*var sale1 = document.getElementById('quant1').value;
         var sale2 = document.getElementById('quant2').value;
         var sale3 = document.getElementById('quant3').value;
         var sale4 = document.getElementById('quant4').value;
@@ -128,11 +142,9 @@
         document.getElementById('item4').innerHTML = regis4;
         document.getElementById('item5').innerHTML = regis5;
         document.getElementById('item6').innerHTML = regis6;
-        document.getElementById('total').innerHTML = regis7;
-      }*/
-      var x = document.getElementById('qty1').value;
-      var y = x * mydata.bento[0].price;
-      window.alert(y);
+        document.getElementById('total').innerHTML = regis7;*/
+      }
+      
       //var x = localStorage.getItem('fn')[0];
       
       //var p = $.getElementsByTagName('p')[0];
