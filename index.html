@@ -67,8 +67,8 @@
       <h1 id="total"></h1>
     </div>
     <script>
-      var fn = [];
-      var fp = [];
+      //var fn = [];
+      //var fp = [];
       var xmlhttp = new XMLHttpRequest();
       xmlhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
@@ -92,14 +92,16 @@
           document.getElementById('price6').innerHTML = mydata.bento[5].price;
           document.getElementById('ingredients6').innerHTML = mydata.bento[5].ingredients;
           document.getElementById('taxes').innerHTML = mydata.bento[6].tax;
-          for(vari = 0; i < mydata.food.length; i++){
+          /*for(vari = 0; i < mydata.food.length; i++){
             fn.push(mydata.food[i].name);
             fp.push(mydata.food[i].price);
-          }
+          }*/
           //window.alert(mydata.bento[3].ingredients[3]);
         }
       }
       //checkout
+      
+      
       /*function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
         var sale1 = document.getElementById('quant1').value;
         var sale2 = document.getElementById('quant2').value;
@@ -128,17 +130,20 @@
         document.getElementById('item6').innerHTML = regis6;
         document.getElementById('total').innerHTML = regis7;
       }*/
-      var x = localStorage.getItem('fn')[0];
+      var x = document.getElementById('qty1').value;
+      var y = x * mydata.bento[0].price;
+      window.alert(y);
+      //var x = localStorage.getItem('fn')[0];
       
-      var p = $.getElementsByTagName('p')[0];
-      var newText = $.createTextNode(parseFloat(x).toFixed(2));
-      p.appendChild(newText);
+      //var p = $.getElementsByTagName('p')[0];
+      //var newText = $.createTextNode(parseFloat(x).toFixed(2));
+      //p.appendChild(newText);
       
-      var sum = priceArr.reduce(add,0);
+      /*var sum = priceArr.reduce(add,0);
       function add(a,b){
         return a + b;
-      }
-      window.alert(sum);
+      }*/
+      //window.alert(sum);
         
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
