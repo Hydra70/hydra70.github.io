@@ -66,7 +66,6 @@
       <p id="taxes"></p>
       <h1 id="total"></h1>
     </div>
-    <p>Products: salmon, soft shelled crab, chicken katsu, shrimp, fried rice, and tempura roll(could add more but I'm out of ideas).</p>
     <script>
       var fn = [];
       var fp = [];
@@ -135,11 +134,11 @@
       var newText = $.createTextNode(parseFloat(x).toFixed(2));
       p.appendChild(newText);
       
-      //var sum = priceArr.reduce(add,0);
-      /*function add(a,b){
+      var sum = priceArr.reduce(add,0);
+      function add(a,b){
         return a + b;
-      }*/
-      //window.alert(sum);
+      }
+      window.alert(sum);
         
       xmlhttp.open("GET","bento.json",true);
       xmlhttp.send();
