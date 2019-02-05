@@ -65,7 +65,6 @@
       <p></p>
       <p id="taxes"></p>
       <h1 id="total"></h1>
-      <button onclick="purchase1">[TEST]</button>
     </div>
     <script>
       var fn = [];
@@ -108,14 +107,17 @@
             fp.push(mydata.bento[5].price);
           }
           //window.alert(mydata.bento[3].ingredients[3]);
-          window.alert(fn[0] + fp[0]);
+          window.alert(fn[0]+fp[0]);
         }
       }
       //checkout
       
       
-      /*function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
-        var sale1 = document.getElementById('quant1').value;
+      function purchase1(){//experimental not 100% going to work, 97% chance of it breaking everything; keeping as backup.
+        var x = document.getElementById('qty1').value;
+        var y = x * mydata.bento[0].price;
+        window.alert(y);
+        /*var sale1 = document.getElementById('quant1').value;
         var sale2 = document.getElementById('quant2').value;
         var sale3 = document.getElementById('quant3').value;
         var sale4 = document.getElementById('quant4').value;
@@ -140,18 +142,14 @@
         document.getElementById('item4').innerHTML = regis4;
         document.getElementById('item5').innerHTML = regis5;
         document.getElementById('item6').innerHTML = regis6;
-        document.getElementById('total').innerHTML = regis7;
-      }*/
+        document.getElementById('total').innerHTML = regis7;*/
+      }
       
-      var x = document.getElementById('qty1').value;
-      var y = x * mydata.bento[0].price;
-      window.alert(y);
+      //var x = localStorage.getItem('fn')[0];
       
-      var e = localStorage.getItem('fn')[0];
-      
-      var p = $.getElementsByTagName('p')[0];
-      var newText = $.createTextNode(parseFloat(e).toFixed(2));
-      p.appendChild(newText);
+      //var p = $.getElementsByTagName('p')[0];
+      //var newText = $.createTextNode(parseFloat(x).toFixed(2));
+      //p.appendChild(newText);
       
       /*var sum = priceArr.reduce(add,0);
       function add(a,b){
